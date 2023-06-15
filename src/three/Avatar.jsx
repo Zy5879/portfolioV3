@@ -1,7 +1,7 @@
-import { useAnimations, useGLTF } from "@react-three/drei";
+import { Center, useAnimations, useGLTF } from "@react-three/drei";
 import { useEffect } from "react";
 
-export default function AvatarModel() {
+export default function AvatarModel(props) {
   const avatar = useGLTF("./avatar/avatar-animation-2.glb");
   const { actions } = useAnimations(avatar.animations, avatar.scene);
 
@@ -10,8 +10,10 @@ export default function AvatarModel() {
   }, []);
 
   return (
-    <group>
-      <primitive object={avatar.scene} scale={1} />
-    </group>
+    <>
+      <group>
+        <primitive {...props} object={avatar.scene} />
+      </group>
+    </>
   );
 }
