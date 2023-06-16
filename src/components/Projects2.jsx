@@ -2,7 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Macbook from "../three/Macbook";
 
-export default function Projects() {
+export default function Projects2() {
   return (
     <Canvas
       className="touch-none"
@@ -10,8 +10,7 @@ export default function Projects() {
     >
       <color args={["#28282B"]} attach="background" />
       <Macbook
-        iframe={"https://zy5879.github.io/battleship/"}
-        color={"#5A5A5A"}
+        iframe={"https://heartfelt-pony-28dc16.netlify.app/"}
         y={-1.2}
         rx={-0.256}
       />

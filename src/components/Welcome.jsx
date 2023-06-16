@@ -5,6 +5,7 @@ import { HtmlText } from "../three/Html";
 import ThreeD from "../three/ThreeD";
 import { Html } from "@react-three/drei";
 import Navbar from "./Navbar";
+import { Perf } from "r3f-perf";
 
 const Section = (props) => {
   const { children } = props;
@@ -22,6 +23,7 @@ export default function WelcomeSection() {
   return (
     <>
       <Canvas>
+        <Perf />
         <OrbitControls enableZoom={false} />
         <color args={["#000000"]} attach="background" />
         <directionalLight position={[1, 2, 3]} intensity={2.0} />

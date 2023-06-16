@@ -1,8 +1,7 @@
-import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Macbook from "../three/Macbook";
 
-export default function Projects() {
+export default function Projects4() {
   return (
     <Canvas
       className="touch-none"
@@ -10,8 +9,7 @@ export default function Projects() {
     >
       <color args={["#28282B"]} attach="background" />
       <Macbook
-        iframe={"https://zy5879.github.io/battleship/"}
-        color={"#5A5A5A"}
+        iframe={"https://client-side-blue-vellum.onrender.com/"}
         y={-1.2}
         rx={-0.256}
       />
