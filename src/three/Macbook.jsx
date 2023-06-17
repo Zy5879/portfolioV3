@@ -6,13 +6,11 @@ import {
   ContactShadows,
   Html,
 } from "@react-three/drei";
-import { useMemo } from "react";
 
 export default function Macbook(props) {
   const { scene } = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
   );
-  const copiedScene = useMemo(() => scene.clone(), [scene]);
   return (
     <>
       <Environment preset="city" />
@@ -27,32 +25,21 @@ export default function Macbook(props) {
             width={2.5}
             height={1.65}
             intensity={65}
-            color={props.color}
+            color={"#ed1d24"}
             rotation={[0.1, Math.PI, 0]}
             position={[0, 0.55, -1.15]}
           />
-          <primitive
-            object={copiedScene}
-            scale={1}
-            // position-y={props.positiony}
-            // rotation-x={props.rotationx}
-            // {...props}
-            position-y={props.y}
-            rotation-x={props.rx}
-            // position-y={-1.2}
-            // rotation-x={-0.256}
-          >
+          <primitive object={scene} position-y={props.y}>
             <Html
               transform
               wrapperClass="htmlScreen"
               distanceFactor={1.17}
-              position={[0, 1.56, -1.4]}
+              position={[0, 1.48, -1.4]}
               rotation-x={-0.256}
             >
               <iframe src={props.iframe} />
             </Html>
           </primitive>
-          ;
         </Float>
       </PresentationControls>
 

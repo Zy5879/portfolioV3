@@ -29,9 +29,9 @@ export default function WelcomeSection() {
         <directionalLight position={[1, 2, 3]} intensity={2.0} />
         <Sparkles count={2000} size={1.5} scale={20} />
         <AvatarModel scale={2} position-y={-2} />
-        <Html as="div" fullscreen>
+        {/* <Html as="div" fullscreen>
           <Navbar />
-        </Html>
+        </Html> */}
       </Canvas>
     </>
   );
