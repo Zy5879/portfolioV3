@@ -8,9 +8,10 @@ export default function Navbar() {
         <h1 className="text-white font-bold text-title">
           <a href="/">Zaire McAllister</a>
         </h1>
+
         <button
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-500"
           onClick={() => setOpen(!open)}
         >
           <span className="sr-only">Open main menu</span>
@@ -36,7 +37,6 @@ export default function Navbar() {
           <ul className="flex flex-col md:text-sm p-4 gap-3 font-medium md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0  md:dark:bg-black dark:border-gray-700  transition-all duration-500 ease-in">
             <li
               className="block text-nav py-2 pl-3 pr-5 text-white hover:bg-gray-200 md:hover:text-white md:hover:bg-transparent rounded md:bg-transparent md:p-0 dark:text-white md:dark:hover:bg-transparent dark:hover:bg-gray-700  "
-              // aria-current="page"
               onClick={() => setOpen(false)}
             >
               About

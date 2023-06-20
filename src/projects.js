@@ -14,7 +14,7 @@ export const projects = [
     img: "https://raw.githubusercontent.com/Zy5879/shopping-cart/main/src/images/store-screenshot.png",
     summary:
       "A playstation store built with React and React Router. Users are able to add, modify and remove items from their cart. Throughly tested using React Testing Library and Jest ",
-    tech: "Javascript, Jest",
+    tech: "React, React Router, Tailwind",
     date: "February 2023",
   },
   {
