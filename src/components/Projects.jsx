@@ -1,9 +1,15 @@
 import { projects } from "../projects";
+import { delay, motion } from "framer-motion";
 
 export default function Projects() {
   const projectsSummary = projects.map((project, index) => {
     return (
-      <section key={index}>
+      <motion.section
+        key={index}
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h2 className="text-3xl mt-10 mb-5">{project.name}</h2>
         <div>
           <img className="bg-black" src={project.img} />
@@ -28,12 +34,19 @@ export default function Projects() {
           <button>SOURCE CODE</button>
         </div>
         <div className="border-b mt-5"></div>
-      </section>
+      </motion.section>
     );
   });
   return (
     <div className="bg-black text-white p-6">
-      <h2 className="text-5xl">Projects</h2>
+      <motion.h2
+        className="text-5xl"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Projects
+      </motion.h2>
       <div className="border-b mt-10"></div>
       <br />
       {projectsSummary}

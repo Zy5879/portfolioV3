@@ -1,9 +1,13 @@
-import { Canvas } from "@react-three/fiber";
-import Macbook from "../three/Macbook";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="bg-black text-white p-5">
+    <motion.section
+      className="bg-black text-white p-5"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <h1 className="text-4xl">About Me</h1>
       <br />
       <p>
@@ -51,6 +55,6 @@ export default function About() {
         </div>
       </section>
       <div className="border-b mt-5"></div>
-    </section>
+    </motion.section>
   );
 }

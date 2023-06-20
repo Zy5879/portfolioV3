@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
-    <footer className="bg-black text-white p-5">
+    <motion.footer
+      className="bg-black text-white p-5"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <p>
         <span>GET IN TOUCH WITH ME!</span>
       </p>
@@ -33,6 +40,6 @@ export default function Contact() {
           <a href="https://github.com/Zy5879">GITHUB</a>
         </div>
       </section>
-    </footer>
+    </motion.footer>
   );
 }
