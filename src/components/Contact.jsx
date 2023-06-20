@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white p-5">
       <p>
         <span>GET IN TOUCH WITH ME!</span>
       </p>

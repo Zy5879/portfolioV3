@@ -1,43 +1,40 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import Macbook from "../three/Macbook";
 import { projects } from "../projects";
 
 export default function Projects() {
   const projectsSummary = projects.map((project, index) => {
     return (
       <section key={index}>
-        <div>{project.name}</div>
+        <h2 className="text-3xl mt-10 mb-5">{project.name}</h2>
         <div>
           <img className="bg-black" src={project.img} />
         </div>
-        <div>
-          Summary
+        <div className="mt-5">
+          <h3 className="text-3xl">Summary</h3>
           <p>{project.summary}</p>
         </div>
         <div>
-          <p>
-            <span>Technologies</span>
-          </p>
+          <h4 className="text-3xl mt-5">Technologies</h4>
           <p>
             <span>{project.tech}</span>
           </p>
         </div>
-        <div>
+        <div className="mt-5">
           <p>
-            <span>Date</span> {project.date}
+            <span className="font-bold">Date</span> {project.date}
           </p>
         </div>
-        <div>
+        <div className="flex gap-5 mt-5">
           <button>LIVE LOOK</button>
           <button>SOURCE CODE</button>
         </div>
+        <div className="border-b mt-5"></div>
       </section>
     );
   });
   return (
-    <div className="bg-black text-white">
-      <h1>Projects</h1>
+    <div className="bg-black text-white p-6">
+      <h2 className="text-5xl">Projects</h2>
+      <div className="border-b mt-10"></div>
       <br />
       {projectsSummary}
     </div>
