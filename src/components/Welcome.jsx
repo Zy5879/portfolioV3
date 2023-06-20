@@ -21,7 +21,7 @@ export default function WelcomeSection() {
     <>
       <Loader />
       <Canvas>
-        <Perf />
+        {/* <Perf /> */}
         <OrbitControls enableZoom={false} />
         <color args={["#000000"]} attach="background" />
         <directionalLight position={[1, 2, 3]} intensity={2.0} />

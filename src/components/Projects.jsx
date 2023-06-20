@@ -38,7 +38,7 @@ export default function Projects() {
     );
   });
   return (
-    <div className="bg-black text-white p-6">
+    <div className="bg-black text-white p-6" id="projects">
       <motion.h2
         className="text-5xl"
         initial={{ opacity: 0, y: 25 }}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -6,7 +7,9 @@ export default function Navbar() {
     <nav className="flex justify-between bg-opacity-20 backdrop-filter backdrop-blur-md fixed text-white z-[1] w-screen">
       <div className="w-screen sticky flex flex-wrap items-center justify-between p-4">
         <h1 className="text-white font-bold text-title">
-          <a href="/">Zaire McAllister</a>
+          <Link to="root" spy={true} smooth={true} duration={500} offset={-100}>
+            Zaire McAllister
+          </Link>
         </h1>
 
         <button
@@ -34,26 +37,40 @@ export default function Navbar() {
             open ? "block text-nav " : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:text-sm p-4 gap-3 font-medium md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0  md:dark:bg-black dark:border-gray-700  transition-all duration-500 ease-in">
-            <li
-              className="block text-nav py-2 pl-3 pr-5 text-white hover:bg-gray-200 md:hover:text-white md:hover:bg-transparent rounded md:bg-transparent md:p-0 dark:text-white md:dark:hover:bg-transparent dark:hover:bg-gray-700  "
-              onClick={() => setOpen(false)}
-            >
-              About
-            </li>
-            <li
-              className="block text-nav py-2 pl-3 pr-4 text-white rounded hover:bg-gray-200 hover:text-black md:hover:text-white md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+          <ul className="flex flex-col md:text-sm p-4 gap-3 font-medium md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0 transition-all duration-500 ease-in">
+            <Link
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="block text-nav py-2 pl-3 pr-5 text-white hover:bg-gray-200 hover:text-black md:hover:text-white md:hover:bg-transparent rounded md:bg-transparent md:p-0"
               onClick={() => setOpen(false)}
             >
               Projects
-            </li>
-            <li
-              className="block text-nav py-2 pl-3 pr-4 text-white rounded hover:bg-gray-200 hover:text-black md:hover:text-white md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              to="/products/wallets"
+            </Link>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-100}
+              className="block text-nav py-2 pl-3 pr-4 text-white rounded hover:bg-gray-200 hover:text-black md:hover:text-white md:hover:bg-transparent md:border-0  md:p-0"
+              onClick={() => setOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              className="block text-nav py-2 pl-3 pr-4 text-white rounded hover:bg-gray-200 hover:text-black md:hover:text-white md:hover:bg-transparent md:border-0  md:p-0"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-100}
               onClick={() => setOpen(false)}
             >
               Contact
-            </li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <motion.footer
+      id="contact"
       className="bg-black text-white p-5"
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
+      <h1 className="text-3xl">Contact Me</h1>
+      <br />
       <p>
         <span>GET IN TOUCH WITH ME!</span>
       </p>
