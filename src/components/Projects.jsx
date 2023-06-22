@@ -4,37 +4,59 @@ import { delay, motion } from "framer-motion";
 export default function Projects() {
   const projectsSummary = projects.map((project, index) => {
     return (
-      <motion.section
-        key={index}
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-3xl mt-10 mb-5">{project.name}</h2>
-        <div>
-          <img className="bg-black" src={project.img} />
-        </div>
-        <div className="mt-5">
-          <h3 className="text-3xl">Summary</h3>
-          <p>{project.summary}</p>
-        </div>
-        <div>
-          <h4 className="text-3xl mt-5">Technologies</h4>
-          <p>
-            <span>{project.tech}</span>
-          </p>
-        </div>
-        <div className="mt-5">
-          <p>
-            <span className="font-bold">Date</span> {project.date}
-          </p>
-        </div>
-        <div className="flex gap-5 mt-5">
-          <button>LIVE LOOK</button>
-          <button>SOURCE CODE</button>
-        </div>
-        <div className="border-b mt-5"></div>
-      </motion.section>
+      <>
+        <motion.section
+          key={index}
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="md:flex md:items-center md:gap-10 md:mb-20"
+        >
+          <main className="md:w-2/4">
+            <h2 className="text-3xl mt-10 mb-5">{project.name}</h2>
+            <div>
+              <img
+                className="bg-black aspect-squre rounded-md bg-center bg-cover bg-no-repeat "
+                src={project.img}
+              />
+            </div>
+          </main>
+          <aside className="md:w-2/4 md:mt-8">
+            <div className="mt-5">
+              <h3 className="text-3xl text-white font-bold">Summary</h3>
+              <p className="text-neutral-400 text-sm md:text-base">
+                {project.summary}
+              </p>
+            </div>
+            <div>
+              <h4 className="text-3xl mt-5 text-white font-bold">
+                Technologies
+              </h4>
+              <p className="text-neutral-400 text-sm md:text-base">
+                <span>{project.tech}</span>
+              </p>
+            </div>
+            <div className="mt-5">
+              <p className="text-white font-bold">
+                Date{" "}
+                <span className="text-neutral-400 text-sm font-normal ml-2 md:text-base">
+                  {project.date}
+                </span>
+              </p>
+            </div>
+            <div className="flex gap-5 mt-5 text-sm font-bold md:text-base">
+              <a>LIVE LOOK</a>
+              <a>SOURCE CODE</a>
+            </div>
+          </aside>
+        </motion.section>
+        <motion.div
+          className="border-b border-0 mt-10"
+          initial={{ opacity: 0, x: -400 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
+      </>
     );
   });
   return (
@@ -47,7 +69,12 @@ export default function Projects() {
       >
         Projects
       </motion.h2>
-      <div className="border-b mt-10"></div>
+      <motion.div
+        className="border-b border-0 mt-10"
+        initial={{ opacity: 0, x: -400 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
       <br />
       {projectsSummary}
     </div>

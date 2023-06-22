@@ -21,7 +21,7 @@ export const projects = [
     name: "Where's Waldo",
     img: "https://raw.githubusercontent.com/Zy5879/wally/main/src/images/wallyhome.png",
     summary:
-      "My version of Where's Waldo. User's must find 3 characters as quickly as possible. Built with React, React Router for the frontend and Firebase for the backend to store leaderboard information and character coordinates",
+      "My version of Where's Waldo. Users must find three characters as quickly as possible. Built with React, React Router for the frontend and Firebase for the backend to store leaderboard information and character coordinates",
     tech: "React, React Router, Tailwind, Firebase",
     date: "March 2023",
   },

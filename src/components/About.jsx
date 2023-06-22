@@ -11,7 +11,7 @@ export default function About() {
     >
       <h1 className="text-4xl">About Me</h1>
       <br />
-      <p>
+      <p className="text-neutral-400 md:text-2xl">
         My name is Zaire and I am highly motivated web developepr. I am
         proficient in working with React for frontend development, Express for
         backend development, and MongoDB for database management. These tools
@@ -19,8 +19,8 @@ export default function About() {
       </p>
       <br />
       <section className="flex gap-20">
-        <div>
-          <h2 className="font-bold">Frontend</h2>
+        <div className="text-neutral-400 md:text-lg">
+          <h2 className="font-bold text-white md:text-xl">Frontend</h2>
           <br />
           <p>
             <span>Javascript</span>
@@ -38,8 +38,8 @@ export default function About() {
             <span>React Three Fiber</span>
           </p>
         </div>
-        <div>
-          <h2 className="font-bold">Backend</h2>
+        <div className="text-neutral-400 md:text-lg">
+          <h2 className="font-bold text-white md:text-xl">Backend</h2>
           <br />
           <p>
             <span>Node</span>
@@ -55,7 +55,12 @@ export default function About() {
           </p>
         </div>
       </section>
-      <div className="border-b mt-5"></div>
+      <motion.div
+        className="border-b mt-5"
+        initial={{ opacity: 0, x: -400 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
     </motion.section>
   );
 }
