@@ -21,7 +21,6 @@ export default function WelcomeSection() {
     <>
       <Loader />
       <Canvas>
-        {/* <Perf /> */}
         <OrbitControls enableZoom={false} />
         <color args={["#000000"]} attach="background" />
         <directionalLight position={[1, 2, 3]} intensity={2.0} />
@@ -29,9 +28,6 @@ export default function WelcomeSection() {
         <Suspense fallback={null}>
           <AvatarModel scale={2} position-y={-2} />
         </Suspense>
-        {/* <Html as="div" fullscreen>
-          <Navbar />
-        </Html> */}
       </Canvas>
     </>
   );
