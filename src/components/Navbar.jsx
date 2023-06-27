@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between bg-opacity-20 backdrop-filter backdrop-blur-md fixed text-white z-[1] w-screen">
       <div className="w-screen sticky flex flex-wrap items-center justify-between p-4">
-        <h1 className="text-white font-bold text-title">
+        <h1 className="text-white font-bold text-title cursor-pointer">
           <Link to="root" spy={true} smooth={true} duration={500} offset={-100}>
             Zaire McAllister
           </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
             open ? "block text-nav " : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:text-sm p-4 gap-3 font-medium md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0 transition-all duration-500 ease-in">
+          <ul className="flex flex-col cursor-pointer md:text-sm p-4 gap-3 font-medium md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0 transition-all duration-500 ease-in">
             <Link
               to="projects"
               spy={true}

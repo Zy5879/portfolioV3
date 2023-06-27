@@ -45,8 +45,12 @@ export default function Projects() {
               </p>
             </div>
             <div className="flex gap-5 mt-5 text-sm font-bold md:text-base">
-              <a>LIVE LOOK</a>
-              <a>SOURCE CODE</a>
+              <a className="cursor-pointer" href={project.livelink}>
+                LIVE LOOK
+              </a>
+              <a className="cursor-pointer" href={project.code}>
+                SOURCE CODE
+              </a>
             </div>
           </aside>
         </motion.section>
