@@ -12,7 +12,7 @@ export default function About() {
       <h1 className="text-4xl">About Me</h1>
       <br />
       <p className="text-neutral-400 md:text-2xl">
-        My name is Zaire and I am highly motivated Frontend Developer. I am
+        My name is Zaire and I am highly motivated Software Developer. I am
         proficient in working with React for frontend development, Express for
         backend development, and MongoDB for database management. These tools
         empower me to create unique and creative projects!{" "}
